@@ -13,8 +13,8 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"react":"HdMw","object-assign":"YOwE","scheduler":"IGIl"}],"X9zx":[function(require,module,exports) {
 "use strict";function _(){if("undefined"!=typeof __REACT_DEVTOOLS_GLOBAL_HOOK__&&"function"==typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE){0;try{__REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE(_)}catch(O){console.error(O)}}}_(),module.exports=require("./cjs/react-dom.production.min.js");
 },{"./cjs/react-dom.production.min.js":"jF7N"}],"FLHj":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=t(require("react"));function t(e){return e&&e.__esModule?e:{default:e}}var r=function(){return e.default.createElement(e.default.Fragment,null,e.default.createElement("h1",null,"Welcome to React Parcel Micro App!"),e.default.createElement("p",null,"Hard to get more minimal than this React app."))};exports.default=r;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var e=t(require("react"));function t(e){return e&&e.__esModule?e:{default:e}}var l=function(){return e.default.createElement(e.default.Fragment,null,e.default.createElement("h1",null,"Welcome to Everyday Games!"),e.default.createElement("p",null,"Sample Text"))};exports.default=l;
 },{"react":"HdMw"}],"H99C":[function(require,module,exports) {
 "use strict";var e=u(require("react")),r=u(require("react-dom")),t=u(require("./App"));function u(e){return e&&e.__esModule?e:{default:e}}r.default.render(e.default.createElement(t.default,null),document.getElementById("root"));
 },{"react":"HdMw","react-dom":"X9zx","./App":"FLHj"}]},{},["H99C"], null)
-//# sourceMappingURL=/src.553e2903.js.map
+//# sourceMappingURL=/src.2a96c18b.js.map
