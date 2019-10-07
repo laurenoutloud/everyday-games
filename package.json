@@ -1,6 +1,7 @@
 {
   "name": "everyday-games",
   "version": "0.1.0",
+  "homepage": "https://laurenoutloud.github.io/everyday-games",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
@@ -13,8 +14,8 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
-    "predeploy": "rm -rf dist && parcel build index.html",
+    "build": "parcel build index.html --public-url /everyday-games/",
+    "predeploy": "npm build",
     "deploy": "gh-pages -d dist"
   },
   "babel": {
