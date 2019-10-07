@@ -1,7 +1,6 @@
 {
   "name": "everyday-games",
   "version": "0.1.0",
-  "homepage": "https://laurenoutloud.github.io/everday-games",
   "description": "",
   "scripts": {
     "start": "parcel index.html",
