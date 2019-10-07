@@ -16,8 +16,8 @@
   },
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url /everyday-games/",
-    "predeploy": "npm build",
+    "build": "rm -rf dist && parcel build index.html --public-url /everyday-games/",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "babel": {
