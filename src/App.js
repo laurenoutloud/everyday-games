@@ -14,16 +14,16 @@ class App extends Component {
     }
     return listOfGames;
   }
-  test(){
-    console.log(GAME_DATA);
-  }
+  
   render(){
-    this.test();
+    document.body.style.backgroundColor = "lightblue";
     return(
       <div className ="App">
         <h1 className="title">Everyday Games</h1>
         <h2>Select a game to play!</h2>
+        <div className="gameList">
         {this.getGameTiles()}
+        </div>
       </div>
     );
   }

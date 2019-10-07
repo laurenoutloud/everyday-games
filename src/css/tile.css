@@ -1,6 +1,5 @@
 .tile {
     margin: 1em;
-    display: inline-block;
 }
 
 .tile div:hover {
