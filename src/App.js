@@ -6,8 +6,8 @@ class App extends Component {
   render(){
     return(
       <div className ="App">
-        <h1>Everyday Games</h1>
-        <p>Select a game to play!</p>
+        <h1 className="title">Everyday Games</h1>
+        <h2>Select a game to play!</h2>
         <Tile game={"Tic-Tac-Toe"}/>
         <Tile game={"Connect Four"}/>
         <Tile game={"Hangman"}/>

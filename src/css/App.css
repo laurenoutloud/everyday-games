@@ -1,3 +1,11 @@
 .App {
+    font-family: 'Special Elite', cursive;
     text-align: center;
+    background-color: lightblue;
+    height: 100%;
+}
+
+.App .title {
+    color: whitesmoke;
+    font-size: 5em;
 }
