@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from 'react-bootstrap/card';
+import '../css/tile.css'
 
 class Tile extends React.Component{
     constructor(props){
@@ -6,7 +8,11 @@ class Tile extends React.Component{
     }
     render(){
         return (
-            <h2>{this.props.game}</h2>
+            <div className="tile">
+            <Card style ={{width: '18rem'}} body>
+                {this.props.game}
+            </Card>
+            </div>
         )
     }
 }
