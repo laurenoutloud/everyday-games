@@ -9,8 +9,17 @@ class Tile extends React.Component{
     render(){
         return (
             <div className="tile" onClick={()=> alert(this.props.game)}>
-            <Card style ={{width: '18rem'}} body>
-                {this.props.game}
+            <Card style ={{width: '18rem'}}>
+                <Card.Body>
+                    <Card.Title>
+                        {this.props.game}
+                    </Card.Title>
+                    <Card.Subtitle>
+                        {this.props.description}
+                    </Card.Subtitle>
+                </Card.Body>
+
+                
             </Card>
             </div>
         )
