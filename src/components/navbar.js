@@ -1,6 +1,7 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { Nav, Button } from 'react-bootstrap';
 import '../css/navbar.css'
+import history from '../history'
 
 class MyNavbar extends React.Component {
     constructor(props) {
@@ -8,17 +9,11 @@ class MyNavbar extends React.Component {
     }
     render() {
         return (
-           
-            
-                
-                <Nav>
-                    <Nav.Item href="#">
-                        Home
-              </Nav.Item>
-                    
-                </Nav>
-           
-            
+            <Nav>
+                <Button onClick={()=> {history.push('/')}}>
+                    Home
+              </Button>
+            </Nav>
         )
     }
 }
