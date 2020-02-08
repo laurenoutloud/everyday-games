@@ -8,12 +8,8 @@ class Game extends React.Component {
     render() {
         return (
             <div>
-                <div>
-                {this.props.name}
-                </div>
-                <div>
-                {this.props.description}
-                </div>
+                <h1 className="title">{this.props.name}</h1>
+                <h2>{this.props.description}</h2>
             </div>
         )
     }

@@ -10,7 +10,7 @@ class MyNavbar extends React.Component {
     render() {
         return (
             <Nav>
-                <Button onClick={()=> {history.push('/')}}>
+                <Button className="homeButton" variant="dark" onClick={()=> {history.push('/')}}>
                     Home
               </Button>
             </Nav>

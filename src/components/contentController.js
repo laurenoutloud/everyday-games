@@ -15,16 +15,16 @@ class ContentController extends React.Component {
                 let game = this.props.match.params.id
                 return <GameController game={game}></GameController>
             case '/':
-                return <Home></Home>
+                return <Home/>
             default:
-                return <Home></Home>
+                return <Home/>
         }
     }
 
     render() {
         return (
             <div>
-                <Navbar></Navbar>
+                <Navbar/>
                {this.getComponent()}
             </div>
         )
