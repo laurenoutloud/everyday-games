@@ -1,13 +1,9 @@
 import React, { Component } from "react";
 import "./css/App.css";
-import GameController from './components/gameController';
-import { Route, Link,  Router, Switch } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
 import Notfound from './notfound'
 import history from './history';
-import Game from './components/game';
-import MyNavbar from "./components/navbar";
 import ContentController from './components/contentController';
-import { Navbar } from "react-bootstrap";
 
 
 class App extends Component {

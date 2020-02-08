@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from 'react-bootstrap/card';
 import '../css/game.css'
 
 class Game extends React.Component {
@@ -7,8 +6,6 @@ class Game extends React.Component {
         super(props);
     }
     render() {
-        console.log(this.props);
-
         return (
             <div>
                 <div>

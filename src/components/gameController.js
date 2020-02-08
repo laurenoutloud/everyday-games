@@ -1,8 +1,5 @@
 import React from 'react';
-import Tile from "./Tile";
 import { GAME_DATA } from "../gameData";
-//import history from '../history';
-import {useHistory} from 'react-router-dom';
 import Game from './game'
 
 class GameController extends React.Component {
