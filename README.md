@@ -1,6 +1,8 @@
 # Everyday Games
 Simple web application to play simple everyday games! 
 
+https://laurenoutloud.github.io/everyday-games/
+
 ## Development
 Start by cloning the project and doing an `npm install`
 
