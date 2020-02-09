@@ -7,6 +7,8 @@ table{
 }
 
 td {
+    font-size: 2em;
+    text-align: center;
     border: 10px solid white;
     height: 100px;
     width: 100px;
@@ -27,4 +29,8 @@ table tr td:first-child{
 
 table tr td:last-child{
     border-right: none;
+}
+
+#gameOver {
+    display:none;
 }

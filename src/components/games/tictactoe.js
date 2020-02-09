@@ -33,9 +33,10 @@ class TicTacToe extends React.Component {
                         </tr>
                     </tbody>
                 </table>
-                <div className="endGame"></div>
-                <br/>
+                <br/><br/>
                 <Button className="resetButton" variant="dark" size="sm" onClick={()=> {utils.startGame()}}>Reset </Button>
+                <br/><br/>
+                <h2 id="gameOver"/>
             </div>
         )
     }
