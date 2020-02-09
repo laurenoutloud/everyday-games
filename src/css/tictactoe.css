@@ -1,0 +1,30 @@
+.tictactoe {
+    text-align: center;
+    padding: 1em;
+}
+table{
+    display: inline-block;
+}
+
+td {
+    border: 10px solid white;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+}
+
+table tr:first-child td {
+    border-top: none;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr td:first-child{
+    border-left: none;
+}
+
+table tr td:last-child{
+    border-right: none;
+}

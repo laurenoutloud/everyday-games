@@ -1,6 +1,9 @@
-.gameHeader{
-    text-align: center;   
-    color: white;
-    font-size: 5em;
-    font-family: 'Special Elite', cursive;
+
+.game{
+    text-align: center;
+}
+.gameBoard{
+    display:inline-block;
+    /*border: 5px solid white;*/
+    width: 90vw;
 }

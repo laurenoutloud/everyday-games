@@ -1,6 +1,7 @@
 .App {
    font-family: 'Special Elite', cursive;
     text-align: center;
+    padding: .5em;
 }
 
 .App .title {
