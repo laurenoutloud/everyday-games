@@ -30,8 +30,10 @@ export function turnClick(square){
     if (typeof gameBoard[square.target.id] == 'number'){
         turn(square.target.id, player);
 
-        if(!checkTie() && !hasWinner){
-            turn(bestSpot(), computer);
+        if(!hasWinner){
+            if (!checkTie()){
+                turn(bestSpot(), computer);
+            }
         }
     }
 }
@@ -61,7 +63,7 @@ export function checkWin(board, player){
 
 export function gameOver(gameWon){
     for (let index of winningCombinations[gameWon.index]) {
-        document.getElementById(index).style.backgroundColor = gameWon.player === computer ? "red": "#2ECC71 ";
+        document.getElementById(index).style.backgroundColor = gameWon.player === computer ? "red": "#2ECC71";
     }
     for (let i = 0; i < cells.length; i++){
         cells[i].removeEventListener('click', turnClick, false);
