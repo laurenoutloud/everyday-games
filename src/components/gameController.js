@@ -11,7 +11,7 @@ class GameController extends React.Component {
         for(let game of GAME_DATA.games){
             if(game.route == gameRoute) {
                 //get game data from backend right here? 
-                return <Game name={game.name} description={game.description}></Game>
+                return <Game name={game.name} description={game.description} id={game.id}></Game>
             }
         }
     }

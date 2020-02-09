@@ -1,6 +1,6 @@
 import React from 'react';
 import '../css/game.css';
-import TicTacToe from './games/tictactoe';
+import {renderGame} from '../utils/gameListUtil';
 
 class Game extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class Game extends React.Component {
             <div className="game">
                 <h1 className="title">{this.props.name}</h1>
                 <h2>{this.props.description}</h2>
-                <div className='gameBoard'><TicTacToe/></div>
+                <div className='gameBoard'>{renderGame(this.props.id)}</div>
             </div>
         )
     }
