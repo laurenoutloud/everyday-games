@@ -1,7 +1,7 @@
-let gameBoard;
 let hasWinner = false;
-const player = 'X';
-const computer = 'O';
+const gameBoard = [0,1,2,3,4,5,6,7,8];
+const humanPlayer = 'X';
+const computerPlayer = 'O';
 const winningCombinations = [
     [0,1,2],
     [3,4,5],
@@ -18,7 +18,6 @@ const cells = document.getElementsByClassName('cell');
 export function startGame(){
     document.getElementById("gameOver").style.display = "none";
     hasWinner = false;
-    gameBoard = Array.from(Array(9).keys());
     for (let i = 0; i < cells.length; i++){
         cells[i].innerText = '';
         cells[i].style.removeProperty('background-color');
@@ -26,19 +25,19 @@ export function startGame(){
     }
 }
 
-export function turnClick(square){
-    if (typeof gameBoard[square.target.id] == 'number'){
-        turn(square.target.id, player);
+function turnClick(square){
+    if (typeof gameBoard[square.target.id] === 'number'){
+        turn(square.target.id, humanPlayer);
 
         if(!hasWinner){
             if (!checkTie()){
-                turn(bestSpot(), computer);
+                turn(bestSpot(), computerPlayer);
             }
         }
     }
 }
 
-export function turn(squareId, player){
+function turn(squareId, player){
     gameBoard[squareId] = player;
     document.getElementById(squareId).innerText = player;
     let gameWon = checkWin(gameBoard, player);
@@ -47,7 +46,7 @@ export function turn(squareId, player){
     }
 }
 
-export function checkWin(board, player){
+function checkWin(board, player){
     let moves = board.reduce((a, x ,i) => x === player ? a.concat(i): a, []);
     let gameWon = null;
 
@@ -61,22 +60,22 @@ export function checkWin(board, player){
     return gameWon;
 }
 
-export function gameOver(gameWon){
+function gameOver(gameWon){
     for (let index of winningCombinations[gameWon.index]) {
-        document.getElementById(index).style.backgroundColor = gameWon.player === computer ? "red": "#2ECC71";
+        document.getElementById(index).style.backgroundColor = gameWon.player === computerPlayer ? "red": "#2ECC71";
     }
     for (let i = 0; i < cells.length; i++){
         cells[i].removeEventListener('click', turnClick, false);
     }
-    gameWon.player === computer ? declareWinner("You Lost!") : declareWinner("You Won!");
+    gameWon.player === computerPlayer ? declareWinner("You Lost!") : declareWinner("You Won!");
 }
 
-export function declareWinner(winner){
+function declareWinner(winner){
     document.getElementById("gameOver").innerText = winner;
     document.getElementById("gameOver").style.display = "block";
 }
 
-export function checkTie(){
+function checkTie(){
     if (emptySquares().length === 0){
         for (let i = 0; i < cells.length; i++){
             cells[i].style.backgroundColor = "gray";
@@ -88,11 +87,11 @@ export function checkTie(){
     return false;
 }
 
-export function emptySquares(){
+function emptySquares(){
     return gameBoard.filter(x => typeof x == 'number');
 }
 
-export function bestSpot(){
+function bestSpot(){
     let squares = emptySquares();
     return squares[Math.floor(Math.random() * squares.length)];
 }

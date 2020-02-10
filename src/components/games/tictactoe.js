@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
 import '../../css/ticTacToe.css';
-import * as utils from '../../utils/tictactoeUtils';
+import * as utils from '../../utils/ticTacToeUtils';
 
 class TicTacToe extends React.Component {
     constructor(props) {
@@ -34,7 +34,7 @@ class TicTacToe extends React.Component {
                     </tbody>
                 </table>
                 <br/><br/>
-                <Button className="resetButton" variant="dark" size="sm" onClick={()=> {utils.startGame()}}>Reset </Button>
+                <Button className="resetButton" variant="dark" size="sm" onClick={()=> {utils.startGame()}}>Reset</Button>
                 <br/><br/>
                 <h2 id="gameOver"/>
             </div>
