@@ -1,23 +1,37 @@
 import React from 'react';
-import Navbar from './navbar'
-import GameController from './gameController';
-import Home from './home'
+import Navbar from './navbar';
+import Home from './home';
+import { GAME_DATA } from "../gameData";
+import '../css/game.css';
+
 class ContentController extends React.Component {
     constructor(props) {
         super(props);
-        
+    }
+
+    getGame(gameRoute){
+        for(let game of GAME_DATA.games){
+            if(game.route === gameRoute) {
+                return ( 
+                    <div className="game">
+                        <h1 className="title">{game.name}</h1>
+                        <h2>{game.description}</h2>
+                        <div className='gameBoard'>{game.component}</div>
+                    </div>
+                );
+            }
+        }
+        return <Home/>;
     }
 
     getComponent(){
-        let match = this.props.match.path
-        switch(match){
+        let path = this.props.match.path;
+        switch(path){
             case '/game/:id':
-                let game = this.props.match.params.id
-                return <GameController game={game}></GameController>
-            case '/':
-                return <Home/>
+                let gameRoute = this.props.match.params.id;
+                return this.getGame(gameRoute);
             default:
-                return <Home/>
+                return <Home/>;
         }
     }
 
@@ -27,7 +41,7 @@ class ContentController extends React.Component {
                 <Navbar/>
                {this.getComponent()}
             </div>
-        )
+        );
     }
 }
 

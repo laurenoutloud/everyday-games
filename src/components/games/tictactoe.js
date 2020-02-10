@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from 'react-bootstrap';
-import '../../css/tictactoe.css';
+import '../../css/ticTacToe.css';
 import * as utils from '../../utils/tictactoeUtils';
 
 class TicTacToe extends React.Component {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Tile from "./Tile";
+import Tile from "./gameTile";
 import { GAME_DATA } from "../gameData";
 import history from '../history';
 

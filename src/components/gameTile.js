@@ -1,14 +1,14 @@
 import React from 'react';
 import Card from 'react-bootstrap/card';
-import '../css/tile.css'
+import '../css/gameTile.css'
 
-class Tile extends React.Component{
+class gameTile extends React.Component{
     constructor(props){
         super(props);
     }
     render(){
         return (
-            <div className="tile" onClick={()=> {this.props.gameSelected(this.props.route)}}>
+            <div className="gameTile" onClick={()=> {this.props.gameSelected(this.props.route)}}>
             <Card style ={{width: '18rem'}}>
                 <Card.Body>
                     <Card.Title>
@@ -18,12 +18,10 @@ class Tile extends React.Component{
                         {this.props.description}
                     </Card.Subtitle>
                 </Card.Body>
-
-                
             </Card>
             </div>
         )
     }
 }
 
-export default Tile;
+export default gameTile;

@@ -1,7 +1,7 @@
-.tile {
+.gameTile {
     margin: 1em;
 }
 
-.tile div:hover {
+.gameTile div:hover {
     background-color: lightgreen;
 }

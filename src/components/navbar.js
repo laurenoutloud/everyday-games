@@ -1,7 +1,6 @@
 import React from 'react';
 import { Nav, Button } from 'react-bootstrap';
-import '../css/navbar.css'
-import history from '../history'
+import history from '../history';
 
 class MyNavbar extends React.Component {
     constructor(props) {

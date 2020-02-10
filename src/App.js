@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./css/App.css";
 import { Route, Router, Switch } from 'react-router-dom';
-//import Notfound from './notfound';
 import history from './history';
 import ContentController from './components/contentController';
 
@@ -20,7 +19,6 @@ class App extends Component {
             <Route exact path="/" component={ContentController} />
             <Route path="/game/:id" component={ContentController} />
             {<Route component={ContentController} />}
-            {/*<Route component={Notfound} />*/}
           </Switch>
         </Router>
       </div>
