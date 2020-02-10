@@ -1,6 +1,7 @@
 import React from 'react';
 import TicTacToe from "./components/games/ticTacToe";
 import NotFound from "./components//notFound";
+import Pacman from 'pacman-react';
 
 const GAME_DATA = {
     games: [
@@ -13,11 +14,12 @@ const GAME_DATA = {
     },
     {
         "id": 2,
-        "name": "Connect Four",
-        "route": "connectfour",
-        "description": "Try to get four in a row!",
-        "component" : <NotFound/>
+        "name": "Pacman",
+        "route": "pacman",
+        "description": "Eat the dots and avoid the ghosts!",
+        "component" : <Pacman/>
     },
+    
     {
         "id": 3,
         "name": "Hangman",
@@ -32,6 +34,14 @@ const GAME_DATA = {
         "description": "Make as many boxes as possible!",
         "component" : <NotFound/>
     },
+    {
+        "id": 5,
+        "name": "Connect Four",
+        "route": "connectfour",
+        "description": "Try to get four in a row!",
+        "component" : <NotFound/>
+    },
+    
 ]
 };
 export {GAME_DATA};

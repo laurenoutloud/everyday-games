@@ -3,7 +3,6 @@
     text-align: center;
 }
 .gameBoard{
-    display:inline-block;
-    /*border: 5px solid white;*/
-    width: 90vw;
+    display: flex;
+    justify-content: center;
 }
