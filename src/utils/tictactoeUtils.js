@@ -1,5 +1,5 @@
 let hasWinner = false;
-const gameBoard = [0,1,2,3,4,5,6,7,8];
+let gameBoard;
 const humanPlayer = 'X';
 const computerPlayer = 'O';
 const winningCombinations = [
@@ -16,6 +16,7 @@ const winningCombinations = [
 const cells = document.getElementsByClassName('cell');
 
 export function startGame(){
+    gameBoard = Array.from(Array(9).keys());
     document.getElementById("gameOver").style.display = "none";
     hasWinner = false;
     for (let i = 0; i < cells.length; i++){
@@ -29,11 +30,10 @@ function turnClick(square){
     if (typeof gameBoard[square.target.id] === 'number'){
         turn(square.target.id, humanPlayer);
 
-        if(!hasWinner){
-            if (!checkTie()){
+         if (!checkTie()){
                 turn(bestSpot(), computerPlayer);
             }
-        }
+        
     }
 }
 
@@ -92,7 +92,56 @@ function emptySquares(){
 }
 
 function bestSpot(){
-    let squares = emptySquares();
-    return squares[Math.floor(Math.random() * squares.length)];
+    return minimax(gameBoard, computerPlayer).index;
 }
 
+function minimax(newBoard, player) {
+	var availSpots = emptySquares();
+
+	if (checkWin(newBoard, humanPlayer)) {
+		return {score: -10};
+	} else if (checkWin(newBoard, computerPlayer)) {
+		return {score: 10};
+	} else if (availSpots.length === 0) {
+		return {score: 0};
+	}
+	var moves = [];
+	for (var i = 0; i < availSpots.length; i++) {
+		var move = {};
+		move.index = newBoard[availSpots[i]];
+		newBoard[availSpots[i]] = player;
+
+		if (player == computerPlayer) {
+			var result = minimax(newBoard, humanPlayer);
+			move.score = result.score;
+		} else {
+			var result = minimax(newBoard, computerPlayer);
+			move.score = result.score;
+		}
+
+		newBoard[availSpots[i]] = move.index;
+
+		moves.push(move);
+	}
+
+	var bestMove;
+	if(player === computerPlayer) {
+		var bestScore = -10000;
+		for(var i = 0; i < moves.length; i++) {
+			if (moves[i].score > bestScore) {
+				bestScore = moves[i].score;
+				bestMove = i;
+			}
+		}
+	} else {
+		var bestScore = 10000;
+		for(var i = 0; i < moves.length; i++) {
+			if (moves[i].score < bestScore) {
+				bestScore = moves[i].score;
+				bestMove = i;
+			}
+		}
+	}
+
+	return moves[bestMove];
+}
